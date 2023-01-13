@@ -1,0 +1,447 @@
+/***********Responsive**************/
+
+@media only screen and (max-width: 1499.98px)
+{
+	#kundli-slide .owl-nav, #our-astrologer-slide .owl-nav, #customer-slider .owl-nav {
+        left: -45px;
+        right: -45px;
+    }
+
+
+}
+
+@media only screen and (max-width: 1399.98px)
+{
+
+    #kundli-slide .owl-nav, #our-astrologer-slide .owl-nav, #customer-slider .owl-nav {
+        left: -60px;
+        right: -60px;
+    }
+
+    .astrologer-details {
+        width: 70%; 
+    }
+
+   header .nav > ul > li > a 
+    {
+        font-size: 15px;
+    }
+
+    header .nav > ul > li {
+        margin: 0px 10px 0px 0px;
+    }
+
+    .banner-heading {
+        font-size: 35px; 
+    }
+
+    .astrologer-contact h4 {
+        font-size: 16px;
+         
+    }
+
+
+
+
+}
+
+@media only screen and (max-width: 1299.98px)
+{
+    #kundli-slide .owl-nav, #kundli-slide .owl-nav, #our-astrologer-slide .owl-nav, #customer-slider .owl-nav 
+    {
+        justify-content: center; 
+        position: relative;
+        left: 0; 
+        right: 0; 
+        margin-top: 10px;
+    }
+	
+}
+
+
+@media only screen and (max-width: 1199.98px)
+{
+	.recharge-btn {
+        padding: 5px 20px !important;
+        border-radius: 15px;
+        margin-left: 5px;
+        font-size: 14px !important;
+    }
+
+    header .nav > ul > li > a {
+        font-size: 13px;
+    }
+
+    header .nav > ul > li {
+        margin: 0px 10px 0px 0px;
+    }
+
+    header .nav 
+    {
+        align-items: center;
+    }
+
+    .my-profile 
+    {
+        padding-left: 5px;
+    }
+
+    .banner-heading {
+        font-size: 27px;
+        line-height: 35px;
+    }
+    .banner-text p {
+        font-size: 18px;
+    }
+
+    .astrologer-contact h4 {
+        font-size: 15px;
+        line-height: 18px;
+    }
+
+    .contact-astrologer 
+    {
+        margin-top: -50px;
+    }
+
+    .my-profile .btn-secondary 
+    {
+        font-size: 14px; 
+    }
+
+    .quick-link 
+    {
+        flex-flow: wrap;
+    }
+
+    #menu-bg 
+    {
+        align-items: center;
+        display: flex;
+    }
+    .gemini, .sagitarius {
+        right: 0px;
+    }
+
+    .cancer, .capricornus {
+        left: 0px;
+    }
+
+    .bg-center-pic 
+    {
+        background: transparent;
+    }
+
+    .leo, .libra {
+        right: 0px;
+    }
+
+    .virgo, .scorpio {
+        left: 0px;
+    }
+
+}
+
+@media only screen and (max-width: 991.98px) 
+{
+	
+/*******************************
+********NAV BAR*****************
+*****************************/
+   header .nav 
+    {
+        width: 100%;
+        order: 3;
+        background: #000000d9;
+    }
+    .logo 
+    {
+        margin-bottom: 0px;
+        order: 1;
+    }
+    .header .row
+    {
+        margin: 0px;
+    }
+    #pull 
+    {
+        display: block;
+        width: auto;
+        margin-top: 8px;
+    }
+    ul#menu-bg 
+    {
+        display: none;
+        width: 100%;
+    }
+    .header-phone 
+    {
+        margin-left: 40px;
+        margin-top: 14px;
+    }
+    .top-icon 
+    {
+        margin-top: 31px;
+    }
+
+   header .nav > ul > li
+    {
+        display: block;
+        margin: 0;
+    }
+
+/*******************************
+********NAV BAR*****************
+*****************************/
+
+.sep-respo 
+{
+    display: flex; 
+    align-items: center; 
+    
+}
+
+.top-head 
+{
+    align-items: flex-start !important;
+    flex-flow: wrap;
+}
+
+.my-profile {
+    padding-left: 0px;
+    margin-right: 20px;
+}
+
+.right-head 
+{
+    order: 2;
+    margin-top: 10px;
+}
+
+header .nav > ul > li > a {
+    font-size: 15px;
+    padding: 10px 15px;
+    line-height: 20px;
+}
+
+.contact-astrologer {
+    margin-top: 0px;
+}
+
+.recharge-btn {
+    padding: 10px 20px !important;
+    border-radius: 0;
+    margin-left: 0;
+    font-size: 16px !important;
+    text-align: center;
+}
+
+.recharge-btn:hover 
+{
+    color: #FFF !important;
+}
+
+#banner-slider .owl-dots {
+    bottom: 0;
+}
+
+.top-head {
+    padding: 5px 0 0 0;
+}
+
+
+
+.know-more {
+    border-radius: 0px;
+    width: 100%;
+    height: 45px;
+}
+
+.banner-text {
+    text-align: center;
+}
+
+.astrologer-contact 
+{
+    margin-bottom: 30px;
+}
+
+.contact-astrologer 
+{
+    padding: 30px !important;
+}
+
+.about-sec {
+    padding: 50px 0;
+}
+
+.about-sec .col-lg-5 img 
+{
+    width: 100%;
+}
+
+.about-content 
+{
+    margin-top: 30px;
+}
+
+.contact-astrologer 
+    {
+        z-index: 1;
+    }
+
+	
+}
+
+
+
+@media only screen and (max-width: 767.98px) {
+
+	.banner-content {
+        align-items: end;
+        padding-bottom: 30px;
+    }
+
+    .banner-heading {
+        font-size: 19px;
+        line-height: 26px;
+    }
+
+    .banner-text span {
+        font-size: 19px;
+        margin-bottom: 10px;
+    }
+
+    .banner-text p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .know-more {
+        width: 100%;
+        height: 35px;
+        font-size: 14px !important;
+    }
+
+    .heading-horos {
+        font-size: 28px; 
+        line-height: 35px;
+    } 
+    .swiss-filter-box {
+        margin-bottom: 13px;
+    } 
+    .swiss-filter-box .input-group {
+        width: 100%;
+    }
+    .swiss-sort-box {
+        text-align: start;
+    }
+    .sort-filter-row select {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 575.98px) 
+{
+    .center-astro {
+        justify-content: center !important;
+    }
+
+     #banner-slider .owl-item img {
+        height: 300px;
+    }
+
+    .banner-text span {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .banner-heading {
+        font-size: 17px;
+        line-height: 25px;
+    }
+
+    .heading-horos {
+        font-size: 25px; 
+        line-height: 30px;
+    } 
+
+    .quick-link a {
+        font-size: 14px;
+        line-height: 30px;
+        margin-right: 10px;
+    }
+
+    footer {
+        padding-top: 30px;
+    }
+    .f-contact li a {
+        font-size: 14px; 
+    }
+    .daily-horoscope {
+        padding: 50px 0;
+    }
+    .kundli-match {
+        padding: 50px 0;
+    }
+
+    .our-astrologer {
+        padding: 50px 0;
+    }
+
+    .heading-para p {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .client-content h4 {
+        font-size: 15px; 
+        line-height: 20px;
+    }
+
+    .astrologer-details {
+        width: 80%;
+        padding: 15px 5px 5px 5px;
+    }
+
+    .areacustomer p {
+        font-size: 15px;
+        line-height: 24px; 
+    }
+
+    .areacustomer {
+        padding: 15px !important;
+    } 
+
+    .our-customer {
+        padding: 35px 0;
+    }
+	
+}
+
+@media only screen and (max-width: 480px) 
+{
+	
+}
+
+@media only screen and (max-width: 359.98px) 
+{
+	.logo {
+        width: 130px;
+    }
+    .right-head {
+        margin-top: 5px;
+    }
+
+    .heading-horos {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    
+    .banner-heading {
+        font-size: 16px;
+        line-height: 25px;
+    }
+	
+}

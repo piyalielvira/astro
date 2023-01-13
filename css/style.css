@@ -1,0 +1,1760 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*html, body {
+	width: 100%;
+	overflow-x: hidden;
+} */
+/* @import url("https://use.typekit.net/bja7dxb.css"); */
+/*  font-family: adobe-caslon-pro, serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* font-family: 'Poppins', sans-serif; */
+@font-face {
+	font-family: 'adobe-caslon-pro bold';
+	src: url('../fonts/ACaslonPro-Bold.otf');
+}
+
+* {
+	text-decoration: none !important;
+	outline: none !important;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 25px;
+	background: #fff;
+	letter-spacing: 0.4px;
+	overflow-x: hidden;
+	color: #707070;
+}
+
+img {
+	width: auto;
+	max-width: 100%;
+	height: auto;
+	border: 0;
+}
+
+ul,
+ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a,
+a:hover,
+a:focus {
+	text-decoration: none;
+}
+
+ol {
+	list-style: decimal inside;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: 0;
+	font-weight: 500;
+	font-size: 20px;
+	color: #0d141e;
+	line-height: 30px;
+	font-family: 'Poppins', sans-serif;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+	color: #707070;
+	font-size: 14px;
+	font-family: 'Poppins', sans-serif;
+}
+
+b,
+strong {
+	font-weight: 600;
+}
+
+blockquote {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+/* a, a:hover, a:visited 
+{
+    color: #21a108;
+} */
+
+a:focus,
+p:focus,
+div:focus,
+input:focus,
+textarea:focus,
+submit:focus,
+button:focus {
+	outline: none;
+}
+
+/***************
+page scrool
+**************/
+.scrollup {
+	right: 15px;
+	position: fixed;
+	border-radius: 0;
+	bottom: -80px;
+	width: 45px;
+	height: 45px;
+	z-index: 9999;
+	background: #ff8a00;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	text-align: center;
+	color: #000;
+	padding: 10px;
+}
+
+.scrollup.active {
+	bottom: 92px;
+	right: 15px;
+}
+
+
+/***************
+page scrool
+***************/
+
+/********HAMBURGER ICON***********/
+.hamburger {
+	padding: 0px;
+	display: inline-block;
+	cursor: pointer;
+	transition-property: opacity, filter;
+	transition-duration: 0.15s;
+	transition-timing-function: linear;
+	font: inherit;
+	color: inherit;
+	text-transform: none;
+	background-color: transparent;
+	border: 0;
+	margin: 0;
+	overflow: visible;
+}
+
+.hamburger:hover {
+	opacity: 1;
+}
+
+.hamburger-box {
+	width: 30px;
+	height: 24px;
+	display: inline-block;
+	position: relative;
+}
+
+.hamburger-inner {
+	display: block;
+	top: 50%;
+	margin-top: -2px;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+	width: 30px;
+	height: 2px;
+	background-color: #fff;
+	border-radius: 4px;
+	position: absolute;
+	transition-property: transform;
+	transition-duration: 0.15s;
+	transition-timing-function: ease;
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+	content: "";
+	display: block;
+}
+
+.hamburger-inner::before {
+	top: -10px;
+}
+
+.hamburger-inner::after {
+	bottom: -10px;
+}
+
+/** Spring **/
+.hamburger--spring .hamburger-inner {
+	top: 2px;
+	transition: background-color 0s 0.13s linear;
+}
+
+.hamburger--spring .hamburger-inner::before {
+	top: 10px;
+	transition: top 0.1s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--spring .hamburger-inner::after {
+	top: 20px;
+	transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--spring.is-active .hamburger-inner {
+	transition-delay: 0.22s;
+	background-color: transparent;
+}
+
+.hamburger--spring.is-active .hamburger-inner::before {
+	top: 0;
+	transition: top 0.1s 0.15s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+	transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+
+.hamburger--spring.is-active .hamburger-inner::after {
+	top: 0;
+	transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+	transform: translate3d(0, 10px, 0) rotate(-45deg);
+}
+
+/** Spring **/
+
+/********HAMBURGER ICON***********/
+
+/*******************************
+********NAV BAR*****************
+*****************************/
+#pull {
+	display: none;
+}
+
+.nav>ul>li {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	width: auto;
+	height: auto;
+	margin: 0px 25px 0px 0px;
+}
+
+.nav>ul>li:last-child,
+.nav>ul>li:only-child {
+	margin: 0;
+}
+
+.nav>ul>li::before {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	z-index: 1;
+	content: " ";
+	width: 100%;
+	height: 3px;
+	background: #FF8A00;
+	transform: scaleX(0);
+	-webkit-transform: scaleX(0);
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+
+.nav>ul>li:last-child:before {
+	position: relative;
+}
+
+.nav>ul>li:lastchild::before {
+	background: transparent;
+	position: relative;
+}
+
+.nav>ul>li:lastchild li:hover a {
+	color: #000;
+}
+
+.nav>ul>li:hover::before,
+.nav>ul>li.current-menu-item::before,
+.nav>ul>li.current-menu-parent::before,
+.nav>ul>li.current-menu-ancestor::before {
+	transform: scaleX(1);
+	-webkit-transform: scaleX(1);
+}
+
+.nav>ul>li>a {
+	position: relative;
+	z-index: 1;
+	display: block;
+	width: auto;
+	height: auto;
+	padding: 10px 0px;
+	color: #fff;
+	font-size: 16px;
+	text-transform: capitalize;
+	font-weight: 400;
+	line-height: 25px;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+
+.nav>ul>li:hover>a,
+.nav>ul>li.current-menu-item>a,
+.nav>ul>li.current-menu-parent>a,
+.nav>ul>li.current-menu-ancestor>a {
+	color: #FF8A00;
+}
+
+.nav>ul>li>ul {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 9999;
+	width: 300px;
+	height: auto;
+	padding: 0px 0px 0px 0px;
+	background: none;
+	text-align: left;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+
+.nav>ul>li:last-child>ul,
+.nav>ul>li:nth-last-child(2)>ul {
+	left: auto;
+	right: 0;
+}
+
+.nav>ul>li:hover>ul {
+	top: 100%;
+	opacity: 1;
+	visibility: visible;
+}
+
+.nav>ul>li>ul>li,
+.nav>ul>li>ul>li>ul>li {
+	position: relative;
+	width: 100%;
+	height: auto;
+	float: left;
+}
+
+.nav>ul>li>ul>li>a,
+.nav>ul>li>ul>li>ul>li>a {
+	display: block;
+	width: auto;
+	height: auto;
+	padding: 2px 15px 1px 15px;
+	background: rgba(11, 30, 48, 0.8);
+	border-top: 1px #485665 solid;
+	text-transform: capitalize;
+	font-weight: 500;
+	font-size: 12px;
+	color: #fff;
+	line-height: 18px;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+
+.nav>ul>li:hover>ul>li>a,
+.nav>ul>li:hover>ul>li>ul>li>a {
+	padding: 9px 15px 10px 15px;
+}
+
+.nav>ul>li>ul>li:hover>a,
+.nav>ul>li>ul>li.current-menu-item>a,
+.nav>ul>li>ul>li.current-menu-parent>a,
+.nav>ul>li>ul>li>ul>li:hover>a,
+.nav>ul>li>ul>li>ul>li.current-menu-item>a,
+.nav>ul>li>ul>li>ul>li.current-menu-parent>a {
+	background: #199adb;
+}
+
+.nav>ul>li>ul>li>ul {
+	position: absolute;
+	top: 10%;
+	left: 100%;
+	z-index: 9999;
+	width: 240px;
+	height: auto;
+	background: none;
+	text-align: left;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+
+.nav>ul>li:last-child>ul>li>ul,
+.nav>ul>li:nth-last-child(2)>ul>li>ul {
+	left: auto;
+	right: 100%;
+}
+
+.nav>ul>li>ul>li:hover>ul {
+	top: 0;
+	opacity: 1;
+	visibility: visible;
+}
+
+.middle-conter {
+	width: 100%;
+	display: inline-block;
+	vertical-align: top;
+
+}
+
+/*******************************
+********NAV BAR*****************
+*****************************/
+
+.logo {
+	width: auto;
+	height: auto;
+	padding: 0px;
+}
+
+.logo img {
+	width: 200px;
+}
+
+.my-profile .dropdown-toggle::after {
+	background: url(../images/down-arrow.png) no-repeat right;
+	width: 14px;
+	height: 8px;
+	border: none !important;
+	position: relative;
+	top: 4px;
+}
+
+.my-profile .btn-secondary {
+	color: #fff;
+	background-color: transparent;
+	border-color: #6c757d;
+	border: none !important;
+	box-shadow: none !important;
+	padding: 0;
+	padding-right: 10px;
+}
+
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9;
+}
+
+.top-head {
+	padding: 20px 0;
+}
+
+.recharge-btn {
+	display: flex;
+	background: #FF8A00;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 30px !important;
+	border-radius: 15px;
+	color: #FFF;
+	margin-left: 0px;
+}
+
+.nav>ul>li:last-child :before {
+	position: relative;
+	background: transparent;
+}
+
+.nav>ul>li:hover a.recharge-btn {
+	color: #fff;
+}
+
+.recharge-btn:hover {
+	color: #000;
+}
+
+header .dropdown-item:focus,
+header .dropdown-item:hover {
+	color: #ffffff;
+	background-color: #ff8a00;
+}
+
+header .dropdown-item.active,
+header .dropdown-item:active {
+	background-color: #ff8a00;
+}
+
+.topmines {
+	top: -100px;
+}
+
+.nav-active {
+	position: fixed;
+	top: 0 !important;
+	z-index: 9999;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	width: 100%;
+	background: #000000d1;
+	padding: 0;
+}
+
+.nav-active .top-head {
+	padding: 0px 0;
+}
+
+/************ End Header ***************/
+
+
+/************* Banner ************/
+
+#banner-slider {
+	position: relative;
+}
+
+.banner-content {
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: 999;
+	top: 0;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+}
+
+.banner-text span {
+	color: #FFFFFF;
+	font-size: 24px;
+	display: inline-block;
+	margin-bottom: 20px;
+}
+
+.banner-heading {
+	font-size: 36px;
+	color: #FF8A00;
+	font-weight: bold;
+	font-family: 'adobe-caslon-pro bold';
+	line-height: 50px;
+}
+
+.banner-text p {
+	color: #FFFFFF;
+	font-size: 20px;
+	line-height: 30px;
+}
+
+.know-more {
+	background: #FF8A00;
+	padding: 10px 25px;
+	color: #FFF;
+	border-radius: 15px;
+	width: 172px;
+	height: 54px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 500;
+}
+
+.know-more:hover {
+	color: #fff;
+}
+
+#banner-slider .owl-dots {
+	margin: 0 !important;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 100px;
+}
+
+#banner-slider .owl-dots .owl-dot.active {
+	margin-right: 5px;
+	position: relative;
+}
+
+#banner-slider .owl-dots .owl-dot.active::before {
+	content: '';
+	position: absolute;
+	left: 22px;
+	background: #ff8a00;
+	height: 4px;
+	width: 9px;
+	top: 8px;
+	border-radius: 50px;
+}
+
+#banner-slider .owl-dots .owl-dot.active span,
+#banner-slider .owl-dots .owl-dot:hover span {
+	background: #FF8A00;
+}
+
+/*******************************/
+
+.contact-astrologer {
+	box-shadow: 0px 3px 6px #00000029;
+	border-radius: 15px;
+	background: #FFF;
+	margin-top: -85px;
+	position: relative;
+	z-index: 9;
+}
+
+.astro-icon {
+	width: 94px;
+	height: 94px;
+	background: #ff8b003d;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 auto;
+	border-radius: 50%;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+
+.astrologer-contact h4 {
+	font-size: 18px;
+	color: #000;
+	line-height: 27px;
+	font-weight: 600;
+}
+
+/********************************/
+
+.daily-horoscope {
+	padding: 80px 0;
+}
+
+.center-image {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.horos-stac {
+	width: 217px;
+	height: 82px;
+	box-shadow: 0px 2px 6px #95520336;
+	border-radius: 10px;
+	/* background: #FFF; */
+	display: flex;
+	align-items: center;
+	margin-bottom: 19px;
+	justify-content: space-between;
+	position: relative;
+}
+
+.bg-center-pic {
+	background: url('../images/orange-cercle.png') no-repeat center;
+}
+
+.horos-stac p {
+	font-size: 16px;
+	color: #707070;
+	line-height: 25px;
+	font-weight: 400;
+}
+
+.horos-stac h5 {
+	color: #201A1A;
+	font-weight: 600;
+	font-size: 17px;
+}
+
+.heading-horos {
+	font-size: 36px;
+	color: #000;
+	line-height: 50px;
+	font-family: 'adobe-caslon-pro bold';
+	font-weight: 700;
+}
+
+.heading-horos span {
+	color: #FF8A00;
+}
+
+
+.daily-horoscope .gemini,
+.daily-horoscope .sagitarius {
+	right: 122px;
+}
+
+.daily-horoscope .leo,
+.daily-horoscope .libra {
+	right: 160px;
+}
+
+.daily-horoscope .cancer,
+.daily-horoscope .capricornus {
+	left: 113px;
+}
+
+.daily-horoscope .virgo,
+.daily-horoscope .scorpio {
+	left: 160px;
+}
+
+
+/**************************************/
+
+.kundli-match {
+	background: url('../images/kundali-bg.jpg') no-repeat center;
+	background-size: cover;
+	padding: 80px 0;
+	background-attachment: fixed;
+}
+
+#kundli-slide .card {
+	border-radius: 19px;
+	overflow: hidden;
+}
+
+#kundli-slide .card-title {
+	margin: 0;
+	color: #201A1A;
+	font-size: 18px;
+	line-height: 27px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+#kundli-slide .card-body p {
+	font-size: 14px;
+	color: #707070;
+	line-height: 22px;
+}
+
+#kundli-slide .owl-nav {
+	margin-top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: absolute;
+	left: -60px;
+	right: -60px;
+	top: 44%;
+}
+
+#kundli-slide .owl-nav [class*=owl-] {
+	color: #BCBCBC;
+	font-size: 30px !important;
+	margin: 5px;
+	padding: 4px 7px;
+	background: #FFFFFF !important;
+	display: flex;
+	cursor: pointer;
+	border-radius: 50px;
+	width: 40px;
+	height: 40px;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0px 0px 6px #1E56312E;
+}
+
+#kundli-slide .owl-nav [class*=owl-]:hover {
+	background: #869791;
+	color: #FF8A00 !important;
+	text-decoration: none;
+}
+
+/****************/
+
+.about-sec {
+	padding: 80px 0;
+}
+
+.about-sec .nav-tabs .nav-link {
+	margin-bottom: 0;
+	font-size: 18px;
+	line-height: 40px;
+	color: #201A1A;
+	position: relative;
+	border: none !important;
+	font-weight: 600;
+	padding: 5px 5px 5px 5px;
+	position: relative;
+	margin-right: 50px;
+}
+
+.about-sec .nav-item.show .nav-link,
+.about-sec .nav-link.active {
+	color: #FF8A00;
+	background-color: #fff;
+	border-color: #dee2e6 #dee2e6 #fff;
+	border: none;
+}
+
+.about-sec .nav-item.show .nav-link::before,
+.about-sec .nav-link.active::before {
+	content: '';
+	position: absolute;
+	height: 5px;
+	width: 100%;
+	background: #FF8A00;
+	bottom: -1px;
+	left: 0;
+	border-radius: 5px 5px 0 0;
+}
+
+.about-sec .nav-tabs {
+	border-bottom: 1px solid #b5b4b4;
+}
+
+.story-content a {
+	font-size: 14px;
+	color: #FF8A00;
+}
+
+.about-sec .nav-tabs li:last-child button {
+	margin-right: 0;
+}
+
+/*************************************/
+
+.heading-para p {
+	font-size: 18px;
+	font-weight: 500;
+	color: #707070;
+}
+
+.our-astrologer {
+	background: #F5F5F5;
+	padding: 80px 0;
+}
+
+.cover-astrologer {
+	width: 80%;
+	margin: 0 auto;
+	padding-bottom: 30px;
+}
+
+.bg-astro-slide {
+	width: 100%;
+	background: #FFF;
+	height: 350px;
+	position: absolute;
+	z-index: -9;
+	bottom: 0;
+	border-radius: 20px;
+	border: 1px solid #C1C1C1;
+}
+
+.astrologer-details {
+	width: 60%;
+	margin: 0 auto;
+	margin-top: -85px;
+	background: #FFF;
+	position: relative;
+	padding: 20px 15px 5px 15px;
+	border-radius: 10px;
+}
+
+.astrologer-details h4 {
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 26px;
+}
+
+.astrologer-details p {
+	font-size: 16px;
+	line-height: 26px;
+	color: #707070;
+}
+
+.astor-bookbtn {
+	display: inline-block;
+	text-align: center;
+	background: #FF8A00;
+	padding: 7px 25px;
+	border-radius: 10px;
+	color: #FFF;
+	font-size: 14px;
+	margin-top: 15px;
+}
+
+.astor-bookbtn:hover {
+	color: #FFF;
+}
+
+
+#our-astrologer-slide .owl-nav {
+	margin-top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: absolute;
+	left: -60px;
+	right: -60px;
+	top: 50%;
+}
+
+#our-astrologer-slide .owl-nav [class*=owl-] {
+	color: #BCBCBC;
+	font-size: 30px !important;
+	margin: 5px;
+	padding: 4px 7px;
+	background: #FFFFFF !important;
+	display: flex;
+	cursor: pointer;
+	border-radius: 50px;
+	width: 40px;
+	height: 40px;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0px 0px 6px #1E56312E;
+}
+
+#our-astrologer-slide .owl-nav [class*=owl-]:hover {
+	background: #869791;
+	color: #FF8A00 !important;
+	text-decoration: none;
+}
+
+
+/*****************************************/
+
+.our-customer {
+	padding: 80px 0;
+}
+
+#customer-slider .owl-nav {
+	margin-top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: absolute;
+	left: -60px;
+	right: -60px;
+	top: 40%;
+	z-index: -9;
+}
+
+#customer-slider .owl-nav [class*=owl-] {
+	color: #BCBCBC;
+	font-size: 30px !important;
+	margin: 5px;
+	padding: 4px 7px;
+	background: #FFFFFF !important;
+	display: flex;
+	cursor: pointer;
+	border-radius: 50px;
+	width: 40px;
+	height: 40px;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0px 0px 6px #1E56312E;
+}
+
+#customer-slider .owl-nav [class*=owl-]:hover {
+	background: #869791;
+	color: #FF8A00 !important;
+	text-decoration: none;
+}
+
+.client-image {
+	width: 69px;
+	height: 69px;
+	border-radius: 100px;
+	overflow: hidden;
+}
+
+
+.areacustomer {
+	box-shadow: 0px 0px 13px #0000001F;
+	border-radius: 10px;
+	background: #FFF;
+	position: relative;
+	overflow: hidden;
+	transition: all 0.4s ease-in-out;
+}
+
+
+.areacustomer:hover {
+	background: #FF8A00;
+	transition: all 0.4s ease-in-out;
+}
+
+.areacustomer:hover p,
+.areacustomer:hover p a,
+.areacustomer:hover h4 {
+	color: #FFF;
+	transition: all 0.4s ease-in-out;
+
+}
+
+
+.areacustomer p {
+	font-size: 17px;
+	line-height: 30px;
+	transition: all 0.4s ease-in-out;
+
+}
+
+.client-content h4 {
+	font-size: 18px;
+	font-weight: 600;
+	color: #2E353D;
+	text-transform: uppercase;
+	transition: all 0.4s ease-in-out;
+
+}
+
+.client-content p {
+	font-size: 14px;
+	color: #FF8A00;
+	line-height: 20px;
+	transition: all 0.4s ease-in-out;
+
+}
+
+.areacustomer p a {
+	color: #FF8A00;
+	transition: all 0.4s ease-in-out;
+
+}
+
+
+/*************  Footer ******************/
+
+footer {
+	background: #160C2B;
+	padding-top: 76px;
+}
+
+.footer-holder h4 {
+	font-size: 20px;
+	color: #FF8A00;
+	line-height: 40px;
+	position: relative;
+	margin-bottom: 30px;
+}
+
+.footer-holder h4::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	height: 1px;
+	width: 60px;
+	background-color: #FF8A00;
+}
+
+.quick-link a {
+	color: #FFF;
+	font-size: 16px;
+	line-height: 40px;
+	margin-right: 20px;
+	font-weight: 200;
+	text-transform: capitalize;
+}
+
+.quick-link li:last-child a {
+	margin-right: 0;
+}
+
+.f-contact li span {
+	color: #FF8A00;
+	font-size: 25px;
+	display: flex;
+	width: 25px;
+	height: 25px;
+	flex: 0 0 auto;
+	align-items: center;
+	justify-content: center;
+	margin-right: 10px;
+}
+
+.f-contact li a {
+	color: #FFF;
+	font-size: 16px;
+	line-height: 40px;
+	font-weight: 200;
+	display: flex;
+	align-items: center;
+}
+
+.f-contact li:first-child a span {
+	font-size: 30px;
+}
+
+.footer-holder p {
+	color: #FFF;
+	line-height: 26px;
+	font-weight: 200;
+}
+
+.social-footer li a {
+	font-size: 22px;
+	color: #FFF;
+	margin-right: 15px;
+	transition: all 0.4s ease-in-out;
+}
+
+.social-footer li:hover a {
+	color: #FF8A00;
+}
+
+.social-footer li:last-child a {
+	margin-right: 0 !important;
+}
+
+.copy-right {
+	padding: 20px 0;
+	border-top: 1px solid rgb(223 223 223 / 16%);
+}
+
+.copy-right p {
+	color: #BEBEBE;
+	font-size: 14px;
+	line-height: 17px;
+	font-weight: 200;
+}
+
+.copy-right p a {
+	color: #FF8A00;
+}
+
+/*************  inner-pages ******************/
+
+header.inner-bg {
+	background: transparent linear-gradient(180deg, #170736 0%, #2D1054 100%) 0% 0%;
+}
+
+header.inner-bg .top-head {
+	padding: 4px 0;
+}
+
+.talk-astrologer.banner {
+	margin-top: 74px;
+}
+
+.horoscope.banner {
+	background-image: url(../images/banner/horoscope.png);
+	background-position: center;
+	background-size: cover;
+	height: 289px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 72px;
+}
+
+.page-banner-title h1 {
+	color: #fff;
+	font-size: 40px;
+	font-family: 'adobe-caslon-pro bold'
+}
+
+.daily-horoscope-bg {
+	background: #fff;
+	margin-top: -162px;
+	padding: 50px 0 24px;
+	border-radius: 15px;
+	box-shadow: 0px 3px 6px #00000029;
+}
+
+/* daily-horoscope */
+.daily-horoscope.banner {
+	background-image: url(../images/banner/daily-horoscope.png);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 289px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 72px;
+}
+
+/* tab-css */
+/* Mixins */
+/* Vars */
+.daily-tabs-wrapper {
+	background: transparent;
+	display: flex;
+	box-shadow: 0px 3px 6px #00000029;
+	background: #fff;
+	/* margin: 40px 0; */
+	margin-top: -78px;
+	border-radius: 15px;
+	margin-bottom: 50px;
+}
+
+.daily-horoscope-tab-content {
+	width: 50%;
+	/* background: #FF8A00; */
+}
+
+.daily-horoscope-tab-btn {
+	width: 50%;
+}
+
+.daily-horoscope-tab-btn ul.tabs .gemini,
+.sagitarius {
+	right: 0;
+}
+
+.daily-horoscope-tab-btn ul.tabs {
+	vertical-align: top;
+	position: relative;
+	z-index: 10;
+	/* margin: 25px 0 0; */
+	padding: 0;
+	list-style: none;
+	-ms-transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 40px 25px;
+}
+
+.daily-horoscope-tab-btn ul.tabs li {
+	margin: 0;
+	cursor: pointer;
+	padding: 0px 15px;
+	line-height: 31px;
+	color: white;
+	text-align: left;
+	font-weight: bold;
+	-ms-transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	margin-bottom: 25px;
+}
+
+.daily-horoscope-tab-btn ul.tabs li:hover {
+	color: white;
+	-ms-transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.daily-horoscope-tab-btn ul.tabs li.active {
+	color: #dddddd;
+	-ms-transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	border-radius: 15px;
+}
+
+.daily-horoscope-tab-content .tab_container {
+	vertical-align: top;
+	position: relative;
+	z-index: 20;
+	text-align: left;
+	background: #FF8A00;
+	/* border-radius: 12px; */
+	/* box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); */
+	border-radius: 15px 0px 0px 15px;
+}
+
+.daily-horoscope-tab-content .tab_content {
+	padding: 20px;
+	height: 100%;
+	display: none;
+}
+
+.tab_drawer_heading {
+	display: none;
+}
+
+.daily-horoscope-tab-content .tab-icon-img-para {
+	text-align: center;
+}
+
+.tab-circle-img {
+	width: 116px;
+	margin: auto;
+	background: #fff;
+	border-radius: 50%;
+	/* padding: 18px; */
+	height: 116px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.daily-horoscope-tab-content .tab_content h3 {
+	color: #FFFFFF;
+	font-size: 16px;
+	font-family: 'Poppins', sans-serif;
+}
+
+.tab-icon-img-para h4 {
+	color: #160C2B;
+	font-family: 'adobe-caslon-pro bold';
+	font-size: 34px;
+	line-height: 20px;
+	padding-bottom: 20px;
+	padding-top: 34px;
+}
+
+.daily-horoscope-tab-content .tab_content .tab-icon-img-para p {
+	font-weight: 300;
+	color: #fff;
+}
+
+.daily-horoscope-tab-content .score-div {
+	font-size: 18px;
+	font-family: 'adobe-caslon-pro bold';
+	color: #160C2B;
+
+}
+
+.daily-horoscope-tab-content .progress-bar-div {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.daily-horoscope-tab-content .progress {
+	display: flex;
+	height: 8px;
+	font-size: .75rem;
+	background-color: #e9ecef;
+	border-radius: 0.25rem;
+	width: 46%;
+	border-radius: 15px;
+	margin: auto;
+}
+
+.daily-horoscope-tab-content .progress .progress-bar {
+	background-color: #000;
+	border-radius: 15px;
+}
+
+.daily-horoscope-tab-content .progress-bar-div span {
+	font-family: 'Poppins';
+	font-size: 14px;
+	color: #fff;
+
+}
+
+.daily-horoscope-tab-content .progress-text {
+	width: 27%;
+}
+
+.daily-horoscope-tab-content .progress-text:last-child {
+	text-align: end;
+}
+
+.daily-horoscope-tab-btn ul.tabs .leo,
+.libra {
+	right: 0;
+}
+
+.daily-horoscope-tab-btn ul.tabs .cancer,
+.capricornus,
+.daily-horoscope-tab-btn .virgo,
+.scorpio {
+	left: 0;
+}
+
+.daily-horoscope-tab-btn ul.tabs li.active .horos-stac {
+	background: #ff8a00;
+}
+
+.daily-horoscope-tab-btn ul.tabs li.active .horos-stac h5,
+.daily-horoscope-tab-btn ul.tabs li.active .horos-stac p {
+	color: #fff;
+}
+
+.modal.chat-from-modal {
+	z-index: 9999;
+}
+
+.modal.chat-from-modal .modal-dialog {
+	max-width: 75%;
+	background: #fff;
+	border-radius: 20px;
+}
+
+.modal.chat-from-modal .modal-body {
+	text-align: center;
+}
+
+.modal.chat-from-modal .modal-body h4 {
+	font-family: 'adobe-caslon-pro bold';
+	font-size: 36px;
+	padding-bottom: 5px;
+}
+
+.modal.chat-from-modal .modal-body h4>span {
+	color: #FF8A00;
+}
+
+.chat-from-modal .form-group {
+	height: 50px;
+	position: relative;
+	background: #FFFFFF;
+	border: 1px solid #C1C1C1;
+	border-radius: 10px;
+}
+
+.chat-from-modal .form-group lable {
+	position: absolute;
+	top: -13px;
+	left: 27px;
+	background: #fff;
+	font-size: 14px;
+	font-family: 'Poppins';
+	color: #707070;
+	font-weight: 500;
+}
+
+.chat-from-modal form {
+	margin-top: 40px;
+}
+
+.chat-from-modal form select {
+	word-wrap: normal;
+	display: block;
+	width: 100%;
+	border: 0;
+	/* padding-right: 15px; */
+	padding: 15px 18px;
+	overflow: hidden;
+	background: transparent;
+	font-size: 15px;
+	color: #000;
+	font-weight: 600;
+}
+
+.chat-from-modal form .form-row {
+	margin-bottom: 40px;
+}
+
+.chat-from-modal form input {
+	font-weight: 600;
+	width: 100%;
+	/* height: 65px; */
+	border: 0;
+	background: transparent;
+	padding: 15px 18px;
+	font-size: 14px;
+}
+
+.chat-from-modal form .form-check input {
+	width: 3px;
+	border: 2px solid #ff5722;
+	/* height: 5px; */
+	/* margin: 15px 0; */
+	margin-right: 10px;
+	padding: 9px;
+}
+
+.chat-from-modal form .form-check {
+	text-align: left;
+	display: flex;
+	align-items: center;
+	margin-bottom: 28px;
+}
+
+.chat-from-modal label.form-check-label {
+	color: #ff8a00;
+	font-size: 26px;
+	font-family: 'adobe-caslon-pro bold';
+	padding-top: 12px;
+}
+
+.chat-from-modal label.form-check-label::nth-word(1) {
+	color: #000;
+}
+
+.chat-from-modal form .modal-content {
+	background: transparent;
+}
+
+.chat-from-modal .modal-footer {
+	display: block;
+	text-align: center;
+}
+
+.chat-from-modal .modal-footer button {
+	text-align: center;
+	background: #FF8A00 0% 0% no-repeat padding-box;
+	border-radius: 15px;
+	border: 0;
+	width: 137px;
+	height: 43px;
+	text-align: center;
+}
+
+.color-black {
+	color: #000;
+}
+
+/* kundali-matching-css-start */
+
+.kundali-matching .tabs_wrapper {
+	text-align: center;
+	background: transparent;
+	margin: 59px 0 0px;
+
+}
+
+.kundali-matching .tabs_wrapper {
+	display: flex;
+}
+
+.kundali-matching .tabs_wrapper .kundal-tab-btn {
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+	/* min-height: 120vh; */
+	background: #ff8a00;
+	width: 18%;
+}
+
+.kundali-matching .tabs_wrapper ul.tabs {
+	vertical-align: top;
+	position: relative;
+	z-index: 10;
+	margin: 25px 0 0;
+	padding: 17px 19px;
+	min-width: 175px;
+	list-style: none;
+	-ms-transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+
+}
+
+.kundali-matching .tabs_wrapper ul.tabs li {
+	margin: 0;
+	cursor: pointer;
+	padding: 7px 0px;
+	line-height: 31px;
+	color: #fff;
+	text-align: left;
+	font-weight: bold;
+	-ms-transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	border-bottom: 1px solid #fdad50;
+	font-family: 'Poppins';
+	font-weight: 400;
+}
+
+.kundali-matching .tabs_wrapper ul.tabs li.active {
+	color: #220b44;
+	-ms-transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	font-weight: 700;
+}
+
+.kundali-matching .tabs_wrapper .tab_container {
+	vertical-align: top;
+	position: relative;
+	z-index: 20;
+	width: 81.5%;
+	min-width: 10px;
+	text-align: left;
+	min-height: auto !important;
+	margin-top: 55px;
+}
+
+.kundali-matching .tabs_wrapper .tab_content {
+	padding: 20px;
+	height: 100%;
+	display: none;
+	margin: auto;
+	text-align: center;
+}
+
+.kundali-matching .tab_drawer_heading {
+	display: none;
+}
+
+.kundali-matching .kundal-match-tab-content .free-horcope-form-head {
+	background: #f5e17b;
+	padding: 14px;
+}
+
+.kundali-matching .kundal-tab-row {
+	justify-content: center;
+}
+
+.kundali-matching .tab_content {
+	background: #fff;
+
+}
+
+.kundali-matching .tab_content .free-horcope-form {
+	box-shadow: 0px 0px 9px 2px rgb(0 0 0 / 12%);
+	background: #fff;
+
+}
+
+.kundali-matching .tab_content .free-horosope-form-div {
+	padding: 25px 20px;
+}
+
+.kundali-matching .tab_content form {
+	padding: 32px 22px;
+}
+
+.kundali-matching .tab_content form label {
+	display: block;
+	text-align: left;
+	margin-bottom: 11px;
+	color: #000;
+	font-size: 15px;
+
+}
+
+.kundali-matching .tab_content form .form-control {
+	font-size: 12px;
+	line-height: 1.5;
+	color: #000;
+	height: 40px;
+	appearance: auto;
+}
+
+.kundali-matching .tab_content form .form-group {
+	margin-bottom: 26px;
+}
+
+.kundali-matching .tab_content form .kundal-icon h5 {
+	padding: 15px 0;
+}
+
+.kundali-matching .tab_content form .kundali-male-div,
+.kundali-female-div {
+	padding: 15px 10px;
+}
+
+.kundali-matching .tab_content form .match {}
+
+.kundali-matching .tab_content form .match-hand {
+	margin-bottom: 25px;
+}
+
+.kundali-matching .tab_content form .match button {
+	font-size: 17px;
+	padding: 8px 24px;
+	background: #ff8a00;
+	color: #fff;
+	border-radius: 20px;
+}
+
+@media screen and (max-width: 781px) {
+	section.kundali-matching {
+		padding: 97px 0 0;
+	}
+
+	.kundali-matching .tabs_wrapper .kundal-tab-btn {
+		width: auto;
+	}
+
+	.kundali-matching .tabs_wrapper ul.tabs {
+		display: none;
+	}
+
+	.kundali-matching .tabs_wrapper .tab_container {
+		display: block;
+		margin: 0 auto;
+		width: 100%;
+		border-top: none;
+
+	}
+
+	.kundali-matching .tabs_wrapper .tab_drawer_heading {
+		background-color: #ccc;
+		background: #e9701b;
+		color: #fff;
+		margin: 0;
+		padding: 10px 20px;
+		display: block;
+		cursor: pointer;
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		text-align: center;
+		border-bottom: 1px solid #fff;
+	}
+
+	.kundali-matching .tabs_wrapper .tab_drawer_heading:hover {}
+
+	.kundali-matching .tabs_wrapper .d_active {}
+
+	.kundali-matching .kundal-match-tab-content {
+		margin-bottom: 55px;
+	}
+
+	.kundali-matching .tabs_wrapper .tab_content {
+		padding: 0;
+	}
+}
+
+
+/* kundali-matching-css-end */
+
+@media screen and (max-width: 781px) {
+	.daily-horoscope-tab-btn ul.tabs {
+		display: none;
+	}
+
+	.daily-horoscope-tab-content .tab_container {
+		display: block;
+		margin: 0 auto;
+		width: 95%;
+		border-top: none;
+		border-radius: 0;
+		box-shadow: 0px 0px 10px black;
+	}
+
+	.tab_drawer_heading {
+		background-color: #ccc;
+		background: #600026;
+		/* Old browsers */
+		/* IE6-9 */
+		color: #fff;
+		margin: 0;
+		padding: 5px 20px;
+		display: block;
+		cursor: pointer;
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		text-align: center;
+	}
+
+	/* .tab_drawer_heading:hover {
+      background: #ccc;
+      background: #ae0046;
+      color: white;
+    }
+  
+    .d_active {
+      background: #fff;
+      background: #4c001e;
+      color: #dddddd;
+    } */
+}
